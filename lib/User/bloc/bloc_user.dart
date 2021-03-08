@@ -19,6 +19,7 @@ class UserBloc implements Bloc {
   }
 
   signOut(){
+
     _auth_repository.signOut();
   }
 
