@@ -49,6 +49,7 @@ class ProfileHeader extends StatelessWidget {
       print("Logueado");
       print(snapshot.data);
       user = User(
+          uid: snapshot.data.uid,
           name: snapshot.data.displayName,
           email: snapshot.data.email,
           photoURL: snapshot.data.photoURL);
