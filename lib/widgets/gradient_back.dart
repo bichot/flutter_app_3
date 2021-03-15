@@ -4,7 +4,7 @@ class GradientBack extends StatelessWidget {
   String title = "Popular";
   double height = 0.0;
 
-  GradientBack({Key key, this.height});
+  GradientBack({Key key, this.height});// height = null full screen
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +32,11 @@ class GradientBack extends StatelessWidget {
         fit: BoxFit.none,
         alignment:  Alignment(-1.5, -0.8),
         child: Container(
-          width: screenWidht,
+          width: screenHeight,
           height: screenHeight,
           decoration: BoxDecoration(
             color: Color.fromRGBO(0,0,0,0.05),
-              borderRadius: BorderRadius.circular(screenHeight/2),
+            borderRadius: BorderRadius.circular(screenHeight/2),
           ),
         ),
       )

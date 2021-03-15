@@ -42,19 +42,19 @@ class _SignInScreen extends State<SignInScreen> {
   Widget signInGoogleUI() {
     return Scaffold(
         body: Stack(
-      alignment: Alignment.center,
-      children: <Widget>[
-        GradientBack(height: null),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          alignment: Alignment.center,
           children: <Widget>[
-            Text(
-              "Welcome \n This is your Travel App",
-              style: TextStyle(
-                  fontSize: 37.0,
-                  fontFamily: "Lato",
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
+            GradientBack(height: null),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "Welcome \n This is your Travel App",
+                   style: TextStyle(
+                    fontSize: 37.0,
+                    fontFamily: "Lato",
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
             ),
             ButtonGreen(
               text: "Login with Gmail",
