@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_3/Place/ui/widgets/title_input_location.dart';
 import 'package:flutter_app_3/widgets/gradient_back.dart';
 import 'package:flutter_app_3/widgets/text_input.dart';
 import 'package:flutter_app_3/widgets/title_header.dart';
@@ -73,7 +74,15 @@ class _AddPlaceScreen extends  State<AddPlaceScreen>{
                     hintText: "Description",
                     inputType: TextInputType.multiline,
                     maxLines: 4,
-                    controller: _controlerDescriptionPlace)
+                    controller: _controlerDescriptionPlace
+                ),
+                Container(
+                  margin: EdgeInsets.only(top:20.0),
+                  child: TextInputLocation(
+                    hintText: "Add Location",
+                    iconData: Icons.location_on,
+                  ),
+                )
               ],
             ),
           )
