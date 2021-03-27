@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 
 class FloatingActionButtonGreen extends StatefulWidget {
+
+  final IconData iconData;
+  final VoidCallback onPressed;
+
+  FloatingActionButtonGreen({
+    Key key,
+   @required this.iconData,
+   @required this.onPressed
+   });
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -9,9 +19,9 @@ class FloatingActionButtonGreen extends StatefulWidget {
 
 }
 
-
 class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
 
+  /*
   void onPressedFav(){
     Scaffold.of(context).showSnackBar(
         SnackBar(
@@ -20,7 +30,7 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
     );
 
   }
-
+  */
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -28,7 +38,7 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
       backgroundColor: Color(0xFF11DA53),
       mini: true,
       tooltip: "Fav",
-      onPressed: onPressedFav,
+      onPressed: widget.onPressed,
       child: Icon(
         Icons.favorite_border
       ),

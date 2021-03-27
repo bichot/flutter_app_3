@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_3/Place/ui/widgets/card_image.dart';
 import 'package:flutter_app_3/Place/ui/widgets/title_input_location.dart';
 import 'package:flutter_app_3/widgets/gradient_back.dart';
 import 'package:flutter_app_3/widgets/text_input.dart';
@@ -57,10 +58,18 @@ class _AddPlaceScreen extends  State<AddPlaceScreen>{
             ],
           ),
           Container(
-            margin: EdgeInsets.only(top: 120.9, bottom: 20.0),
+            margin: EdgeInsets.only(top: 120.0, bottom: 20.0),
             child: ListView(
               children:<Widget> [
-                Container(),//Foto
+                Container(
+                  alignment: Alignment.center,
+                  child: CardImageWithFabIcon(
+                      pathImage: "assets/img/sunset.jpeg",
+                      iconData: Icons.camera_alt,
+                      width:350.0,
+                      height: 250.0,
+                    )
+                ),//Foto
                 Container(//TextField Title
                   margin: EdgeInsets.only(bottom: 20.0),
                   child: TextInput(
