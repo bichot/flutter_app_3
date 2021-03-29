@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_3/Place/model/place.dart';
 import 'package:flutter_app_3/Place/ui/widgets/card_image.dart';
 import 'package:flutter_app_3/Place/ui/widgets/title_input_location.dart';
 import 'package:flutter_app_3/User/bloc/bloc_user.dart';
@@ -68,7 +69,7 @@ class _AddPlaceScreen extends  State<AddPlaceScreen>{
                 Container(
                   alignment: Alignment.center,
                   child: CardImageWithFabIcon(
-                      pathImage: "assets/img/sunset.jpeg",
+                      pathImage: widget.image.path,//,
                       iconData: Icons.camera_alt,
                       width:350.0,
                       height: 250.0,
@@ -104,8 +105,16 @@ class _AddPlaceScreen extends  State<AddPlaceScreen>{
                     onPressed: (){
                       //1.firestorage
                       //2.url
-                      //3.cloud firestore
-                      //4.Place - title,descripcion,url,user owner,
+                      //cloud firestore
+                      //Place - title,descripcion,url,user owner,
+                      userBloc.updatePlaceDate(Place(
+                          name: _controlerTitlePlace.text,
+                          description: _controlerDescriptionPlace.text,
+                          likes: 0,
+                      )).whenComplete(() {
+                          print("TERMINO");
+                          Navigator.pop(context);
+                      });
                     },
                   ),
                 )
