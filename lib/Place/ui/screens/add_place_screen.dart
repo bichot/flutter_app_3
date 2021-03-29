@@ -4,10 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_3/Place/ui/widgets/card_image.dart';
 import 'package:flutter_app_3/Place/ui/widgets/title_input_location.dart';
+import 'package:flutter_app_3/User/bloc/bloc_user.dart';
 import 'package:flutter_app_3/widgets/button_purple.dart';
 import 'package:flutter_app_3/widgets/gradient_back.dart';
 import 'package:flutter_app_3/widgets/text_input.dart';
 import 'package:flutter_app_3/widgets/title_header.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class AddPlaceScreen extends StatefulWidget{
 
@@ -28,6 +30,7 @@ class _AddPlaceScreen extends  State<AddPlaceScreen>{
   Widget build(BuildContext context) {
     // TODO: implement build
 
+    UserBloc userBloc = BlocProvider.of<UserBloc>(context);
     final _controlerTitlePlace = TextEditingController();
     final _controlerDescriptionPlace = TextEditingController();
 
